@@ -159,15 +159,29 @@ make up down logs lint fmt test test-contracts sbom provenance release
 ## 9. Configuration
 
 ```ini
-IDEALE_ENV=dev
-IDEALE_LOG_LEVEL=info
-IDEALE_DB_URL=postgresql://user:pass@db:5432/ideale
-IDEALE_OBJECT_STORE=s3://bucket/prefix
+IDEALEEU_ENV=dev
+IDEALEEU_LOG_LEVEL=info
+IDEALEEU_DB_URL=postgresql://user:pass@db:5432/ideale
+IDEALEEU_OBJECT_STORE=s3://bucket/prefix
 OIDC_ISSUER_URL=https://auth.example.com/
 OIDC_AUDIENCE=ideale-api
 JWT_SIGNING_KEY=change-me
 EVENT_BUS_URL=nats://nats:4222
 ```
+
+See `.env.example` for a complete template with descriptions.
+
+A Python configuration module is available in the `config/` directory for easy access to settings:
+
+```python
+from config import get_settings
+
+settings = get_settings()
+print(f"Environment: {settings.env.value}")
+print(f"Database: {settings.db_url}")
+```
+
+Secrets must be injected via the orchestrator secret store. Do not commit secrets.
 Inject secrets via orchestrator/KMS; never commit them.
 
 ---

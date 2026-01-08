@@ -8,6 +8,11 @@ build/
 10-BUSINESS/FINANCE/06-REPORTING/rewardIT_LOG.csv
 /out/
 
+# Environment files
+.env
+.env.local
+.env.*.local
+
 # Digital Passport App
 digital-passport/node_modules/
 digital-passport/dist/
@@ -17,3 +22,5 @@ digital-passport/.env.local
 # Structure tools
 node_modules/
 structure-scan-report/
+.coverage
+htmlcov/
