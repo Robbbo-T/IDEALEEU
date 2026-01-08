@@ -6,7 +6,6 @@ All settings are loaded from environment variables with validation.
 
 import os
 from enum import Enum
-from typing import Optional
 from functools import lru_cache
 
 
