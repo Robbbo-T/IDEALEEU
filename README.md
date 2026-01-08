@@ -240,7 +240,7 @@ A Python configuration module is available in the `config/` directory for easy a
 from config import get_settings
 
 settings = get_settings()
-print(f"Environment: {settings.env}")
+print(f"Environment: {settings.env.value}")
 print(f"Database: {settings.db_url}")
 ```
 
