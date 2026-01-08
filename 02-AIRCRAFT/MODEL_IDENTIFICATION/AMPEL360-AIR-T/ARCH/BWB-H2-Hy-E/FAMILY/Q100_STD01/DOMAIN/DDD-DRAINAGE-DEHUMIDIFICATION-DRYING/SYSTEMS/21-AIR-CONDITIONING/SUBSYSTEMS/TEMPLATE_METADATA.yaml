@@ -1,0 +1,18 @@
+# TEMPLATE_METADATA.yaml - copiar junto a cada artefacto del subsistema
+part_id: "21-10-001"
+description: "Dehumidifier assembly"
+revision: R001
+author: "Systems Engineer"
+cad_system: "Siemens NX"
+cad_version: "NX 2024"
+file_name: "21-10-001-Dehumidifier_Assembly_R001.step"
+units:
+  length: "mm"
+  temperature: "C"
+  pressure: "kPa"
+ebom_id: "EBOM-21-10-001"
+mass_kg: 0.0
+bounding_box_mm: [length_mm, width_mm, height_mm]
+approval_status: "DRAFT"
+last_updated: "2025-10-24"
+notes: "Include PMI datum references and CAE case link."

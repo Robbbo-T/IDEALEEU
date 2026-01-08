@@ -1,0 +1,123 @@
+# Revision History — ATA-05 Time Limits and Maintenance Checks
+# Configuration Baseline: ATA-05/BL-2025.10
+
+baseline_id: "ATA-05/BL-2025.10"
+current_version: "1.0"
+status: "Active"
+
+revisions:
+  - revision: "1.0"
+    date: "2025-10-24"
+    type: "Initial Release"
+    description: "Initial baseline creation per IDEALE-EU CMP framework"
+    ecn: "ECN-2025-05123"
+    originator:
+      name: "CMP Lead — ATA-05"
+      role: "Configuration Manager"
+      organization: "IDEALE-EU Configuration Management"
+    approvers:
+      - name: "TBD"
+        role: "CCB Chair"
+        date: null
+        status: "Pending"
+      - name: "TBD"
+        role: "Chief Engineer — Aircraft"
+        date: null
+        status: "Pending"
+      - name: "TBD"
+        role: "CMP Lead — ATA-05"
+        date: "2025-10-24"
+        status: "Approved"
+    changes:
+      added:
+        - "01-MAINTENANCE_TASKS/ directory structure and README"
+        - "02-DATA_MODULES/ directory structure and README"
+        - "03-IDENTIFICATION/ directory with IDENTIFICATION_CARD.json"
+        - "03-IDENTIFICATION/ESG_DECLARATION.md"
+        - "03-IDENTIFICATION/CMP_REFERENCES.md"
+        - "04-REVISIONS/ directory with REVISION_HISTORY.yaml"
+        - "04-REVISIONS/ECN-2025-05123.json"
+        - "Updated README.md with baseline specification"
+      modified: []
+      removed: []
+    impact:
+      systems_affected: ["ATA-05"]
+      other_ata_chapters: []
+      interfaces_changed: []
+      testing_required: "Validation of directory structure only"
+      documentation_updated: true
+    effectivity:
+      effective_date: "2025-10-24"
+      applicable_aircraft: "All AMPEL360-AIR-T family"
+      serial_numbers: "All"
+      retroactive: false
+    verification:
+      verified_by: "TBD"
+      verified_date: null
+      verification_method: "Structure validation scripts"
+      verification_status: "Pending"
+    notes: |
+      This is the foundational baseline establishing the ATA-05 configuration
+      structure per the IDEALE-EU Configuration Management Program (CMP-STD-1001).
+      
+      The baseline implements the directory structure specified in the program
+      README with four main subdirectories:
+      - 01-MAINTENANCE_TASKS: Executable S1000D work packages
+      - 02-DATA_MODULES: Source data modules (DMCs)
+      - 03-IDENTIFICATION: Baseline ID, ESG declaration, CMP references
+      - 04-REVISIONS: Change history and ECN records
+      
+      Compliance references established:
+      - S1000D Issue 5.0 for technical publications
+      - EASA CS-25 / FAA Part 25.1529 for continued airworthiness
+      - IDEALE-EU CMP-STD-1001 for configuration management
+      - ISO 14001:2015 for environmental management
+      
+      ESG impact assessment completed and documented in ESG_DECLARATION.md.
+      
+      Full CCB approval pending; initial approval by CMP Lead only.
+
+metadata:
+  schema_version: "1.0"
+  last_updated: "2025-10-24T00:25:00Z"
+  updated_by: "IDEALE-EU Configuration Management System"
+  utcs_anchor: "utcs://idealeeu.eu/02-AIRCRAFT/CONFIG_BASE/ATA-05/BL-2025.10/REV"
+  repository: "https://github.com/Robbbo-T/IDEALEEU"
+  path: "/02-AIRCRAFT/CONFIGURATION_BASE/ATA-05_TIME_LIMITS_MAINT_CHECKS/04-REVISIONS/REVISION_HISTORY.yaml"
+
+quality_records:
+  reviews_conducted:
+    - type: "Technical Review"
+      date: "2025-10-24"
+      reviewer: "CMP Lead — ATA-05"
+      status: "Approved"
+  audits:
+    - type: "Configuration Audit"
+      date: null
+      auditor: "TBD"
+      status: "Scheduled"
+  training:
+    - topic: "New ATA-05 Baseline Structure"
+      date: "2025-10-24"
+      attendees: "CMP Team"
+      status: "Planned"
+
+change_control:
+  next_review_date: "2026-10-24"
+  review_frequency: "Annual or as-needed"
+  ccb_meeting_reference: "TBD"
+  change_freeze_periods: []
+
+compliance_verification:
+  regulatory_review: "Pending"
+  internal_audit: "Pending"
+  customer_acceptance: "Not Required"
+  certification_authority: "Not Required"
+
+lessons_learned:
+  - category: "Process"
+    description: "Baseline structure implementation validated against repository conventions"
+    action: "Continue using this structure for other ATA chapter baselines"
+  - category: "Documentation"
+    description: "ESG declaration provides comprehensive framework"
+    action: "Use as template for other ATA chapters"

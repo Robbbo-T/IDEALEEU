@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- S1000D Data Module: ATA-05 Scheduled Maintenance Intervals -->
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/descript.xsd">
+  
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="ATA_05" systemDiffCode="01" systemCode="10"
+                subSystemCode="0" subSubSystemCode="0" assyCode="00"
+                disassyCode="00" disassyCodeVariant="A" infoCode="001"
+                infoCodeVariant="A" itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="01"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2025" month="10" day="24"/>
+        <dmTitle>
+          <techName>Scheduled Maintenance Intervals</techName>
+          <infoName>Maintenance Planning Data</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany enterpriseCode="IDEALEEU">
+        <enterpriseName>IDEALE-EU Consortium</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator enterpriseCode="CMP">
+        <enterpriseName>Configuration and Maintenance Planning</enterpriseName>
+      </originator>
+      <applicability>
+        <applic>
+          <displayText>
+            <simplePara>All AMPEL360-AIR-T aircraft models</simplePara>
+          </displayText>
+        </applic>
+      </applicability>
+      <brexDmRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="S1000D" systemDiffCode="00" systemCode="00"
+                    subSystemCode="0" subSubSystemCode="0" assyCode="00"
+                    disassyCode="00" disassyCodeVariant="A" infoCode="022"
+                    infoCodeVariant="A" itemLocationCode="A"/>
+          </dmRefIdent>
+        </dmRef>
+      </brexDmRef>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+  
+  <content>
+    <description>
+      <levelledPara>
+        <title>Scheduled Maintenance Intervals</title>
+        <para>This Data Module defines the scheduled maintenance intervals for time-limited tasks and periodic maintenance checks under ATA Chapter 05.</para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Interval Types</title>
+        <para>Maintenance intervals are categorized by:</para>
+        <para>
+          <randomList>
+            <listItem>
+              <para><emphasis>Calendar-based intervals</emphasis>: Tasks scheduled by calendar time (days, months, years)</para>
+            </listItem>
+            <listItem>
+              <para><emphasis>Flight-hour-based intervals</emphasis>: Tasks scheduled by cumulative flight hours</para>
+            </listItem>
+            <listItem>
+              <para><emphasis>Cycle-based intervals</emphasis>: Tasks scheduled by flight cycles (takeoff/landing)</para>
+            </listItem>
+            <listItem>
+              <para><emphasis>Condition-based intervals</emphasis>: Tasks triggered by system condition monitoring</para>
+            </listItem>
+          </randomList>
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Standard Intervals</title>
+        <table>
+          <tgroup cols="4">
+            <colspec colname="c1"/>
+            <colspec colname="c2"/>
+            <colspec colname="c3"/>
+            <colspec colname="c4"/>
+            <thead>
+              <row>
+                <entry>Task Code</entry>
+                <entry>Description</entry>
+                <entry>Interval Type</entry>
+                <entry>Interval Value</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>ATA-05-001</entry>
+                <entry>Daily inspection</entry>
+                <entry>Calendar</entry>
+                <entry>24 hours</entry>
+              </row>
+              <row>
+                <entry>ATA-05-002</entry>
+                <entry>Weekly inspection</entry>
+                <entry>Calendar</entry>
+                <entry>7 days</entry>
+              </row>
+              <row>
+                <entry>ATA-05-003</entry>
+                <entry>Monthly inspection</entry>
+                <entry>Calendar</entry>
+                <entry>30 days</entry>
+              </row>
+              <row>
+                <entry>ATA-05-004</entry>
+                <entry>100-hour inspection</entry>
+                <entry>Flight hours</entry>
+                <entry>100 FH</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>ESG Integration</title>
+        <para>All scheduled maintenance activities include ESG impact tracking:</para>
+        <para>
+          <randomList>
+            <listItem>
+              <para>Material consumption and waste generation metrics</para>
+            </listItem>
+            <listItem>
+              <para>Energy usage during maintenance operations</para>
+            </listItem>
+            <listItem>
+              <para>Environmental impact of consumables and fluids</para>
+            </listItem>
+            <listItem>
+              <para>Worker safety and ergonomics considerations</para>
+            </listItem>
+          </randomList>
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>References</title>
+        <para>
+          <randomList>
+            <listItem>
+              <para>EASA CS-25 / FAA Part 25.1529 - Instructions for Continued Airworthiness</para>
+            </listItem>
+            <listItem>
+              <para>MSG-3 - Maintenance Steering Group Logic</para>
+            </listItem>
+            <listItem>
+              <para>IDEALE-EU CMP-STD-1001 - Configuration and Maintenance Planning Standard</para>
+            </listItem>
+          </randomList>
+        </para>
+      </levelledPara>
+    </description>
+  </content>
+</dmodule>

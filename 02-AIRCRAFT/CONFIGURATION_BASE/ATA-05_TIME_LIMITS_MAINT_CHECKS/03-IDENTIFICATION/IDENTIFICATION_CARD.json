@@ -1,0 +1,125 @@
+{
+  "baselineId": "ATA-05/BL-2025.10",
+  "version": "1.0",
+  "status": "Active",
+  "title": "Time Limits and Maintenance Checks Configuration Baseline",
+  "chapter": "ATA-05",
+  "owner": "CMP Lead — ATA-05",
+  "createdDate": "2025-10-24",
+  "lastModified": "2025-10-24",
+  "description": "This baseline defines the reference configuration for all time-limited tasks, periodic maintenance checks, and service intervals under ATA Chapter 05.",
+  "scope": {
+    "includes": [
+      "Calendar-based maintenance actions",
+      "Flight-time-based maintenance actions",
+      "A/B/C/D-check scheduling logic",
+      "Integration with S1000D data modules",
+      "ESG impact reporting per task"
+    ],
+    "systems": [
+      "Airframe time limits",
+      "Propulsion time limits",
+      "Electrical system maintenance checks",
+      "Systems periodic maintenance"
+    ]
+  },
+  "configurationItems": [
+    {
+      "ciId": "ATA-05/BL-2025.10",
+      "description": "Time Limits and Maintenance Checks baseline",
+      "owner": "CMP",
+      "source": "03-IDENTIFICATION/IDENTIFICATION_CARD.json"
+    },
+    {
+      "ciId": "ECN-2025-05123",
+      "description": "Initial baseline creation",
+      "owner": "CMP",
+      "source": "04-REVISIONS/ECN-2025-05123.json"
+    }
+  ],
+  "compliance": {
+    "standards": [
+      {
+        "reference": "S1000D Issue 5.0",
+        "description": "Data Module coding and publication structure",
+        "status": "Compliant"
+      },
+      {
+        "reference": "EASA CS-25 / FAA Part 25.1529",
+        "description": "Instructions for Continued Airworthiness",
+        "status": "Aligned"
+      },
+      {
+        "reference": "IDEALE-EU CMP-STD-1001",
+        "description": "Configuration and Maintenance Planning Standard",
+        "status": "Compliant"
+      },
+      {
+        "reference": "ISO 14001:2015",
+        "description": "Environmental management reference for ESG declaration",
+        "status": "Aligned"
+      }
+    ]
+  },
+  "traceability": {
+    "utcsAnchor": "utcs://idealeeu.eu/02-AIRCRAFT/CONFIG_BASE/ATA-05/BL-2025.10",
+    "repository": "https://github.com/Robbbo-T/IDEALEEU",
+    "path": "/02-AIRCRAFT/CONFIGURATION_BASE/ATA-05_TIME_LIMITS_MAINT_CHECKS"
+  },
+  "governance": {
+    "ccbApproval": "Pending",
+    "ccbDate": null,
+    "approvers": [
+      {
+        "role": "CCB Chair",
+        "name": "TBD",
+        "date": null
+      },
+      {
+        "role": "Chief Engineer — Aircraft",
+        "name": "TBD",
+        "date": null
+      },
+      {
+        "role": "CMP Lead — ATA-05",
+        "name": "TBD",
+        "date": "2025-10-24"
+      }
+    ]
+  },
+  "revisionControl": {
+    "currentRevision": "1.0",
+    "revisionHistory": "../04-REVISIONS/REVISION_HISTORY.yaml",
+    "changeNotices": [
+      "ECN-2025-05123"
+    ]
+  },
+  "esgDeclaration": {
+    "reference": "ESG_DECLARATION.md",
+    "environmentalImpact": "Documented",
+    "socialResponsibility": "Documented",
+    "governanceFramework": "Active"
+  },
+  "relatedDocuments": [
+    {
+      "type": "README",
+      "path": "README.md",
+      "description": "Main baseline documentation"
+    },
+    {
+      "type": "ESG_DECLARATION",
+      "path": "ESG_DECLARATION.md",
+      "description": "Environmental, Social, and Governance declaration"
+    },
+    {
+      "type": "CMP_REFERENCES",
+      "path": "CMP_REFERENCES.md",
+      "description": "Configuration Management Program references"
+    }
+  ],
+  "metadata": {
+    "schema": "https://github.com/Robbbo-T/IDEALEEU/schemas/baseline/identification-card.v1.json",
+    "generatedBy": "IDEALE-EU Configuration Management System",
+    "generatedDate": "2025-10-24T00:25:00Z"
+  }
+}

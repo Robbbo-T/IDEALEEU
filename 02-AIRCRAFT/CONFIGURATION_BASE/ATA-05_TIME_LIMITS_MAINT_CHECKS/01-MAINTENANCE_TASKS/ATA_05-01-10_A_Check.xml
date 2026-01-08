@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  S1000D Issue 5.0 Data Module
+  ATA Chapter 05 - Time Limits and Maintenance Checks
+  A-Check Maintenance Package
+  
+  This data module defines the A-Check maintenance tasks for the AMPEL360 AIR-T aircraft.
+  A-Checks are performed every 500-800 flight hours or 200-300 flight cycles.
+-->
+<dmodule xmlns="http://www.s1000d.org/S1000D_5-0/xml_schema_flat"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat http://www.s1000d.org/S1000D_5-0/xml_schema_flat/dmodule.xsd">
+  
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMP360" 
+                systemDiffCode="A" 
+                systemCode="05" 
+                subSystemCode="01" 
+                subSubSystemCode="10"
+                assyCode="00A" 
+                disassyCode="00" 
+                disassyCodeVariant="A"
+                infoCode="540" 
+                infoCodeVariant="A" 
+                itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2025" month="10" day="24"/>
+        <dmTitle>
+          <techName>A-Check Maintenance Package</techName>
+          <infoName>Operational Test</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany enterpriseCode="IDEALE">
+        <enterpriseName>IDEALE EU Consortium</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator enterpriseCode="IDEALE">
+        <enterpriseName>IDEALE EU Technical Publications</enterpriseName>
+      </originator>
+      <applic>
+        <displayText>
+          <simplePara>AMPEL360 AIR-T BWB-H2-Hy-E All Effectivity</simplePara>
+        </displayText>
+      </applic>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+
+  <content>
+    <procedure>
+      <preliminaryRqmts>
+        <reqCondGroup>
+          <noConds/>
+        </reqCondGroup>
+        <reqSupportEquips>
+          <noSupportEquips/>
+        </reqSupportEquips>
+        <reqSupplies>
+          <noSupplies/>
+        </reqSupplies>
+        <reqSpares>
+          <noSpares/>
+        </reqSpares>
+        <reqSafety>
+          <noSafety/>
+        </reqSafety>
+      </preliminaryRqmts>
+
+      <mainProcedure>
+        <proceduralStep>
+          <title>A-Check Maintenance Task Overview</title>
+          <para>
+            This procedure describes the A-Check maintenance tasks to be performed at intervals of 
+            500-800 flight hours or 200-300 flight cycles, whichever occurs first.
+          </para>
+          <para>
+            The A-Check typically takes 10-20 hours and includes visual inspections, operational checks, 
+            and minor servicing tasks.
+          </para>
+        </proceduralStep>
+
+        <proceduralStep>
+          <title>Pre-Check Requirements</title>
+          <para>Before beginning the A-Check, verify the following:</para>
+          <sequentialList>
+            <listItem>
+              <para>Aircraft is positioned in a suitable maintenance location</para>
+            </listItem>
+            <listItem>
+              <para>Aircraft is properly grounded and secured</para>
+            </listItem>
+            <listItem>
+              <para>Work order has been generated in AAMMPP system</para>
+            </listItem>
+            <listItem>
+              <para>All required tools and materials are available</para>
+            </listItem>
+            <listItem>
+              <para>Qualified maintenance personnel are assigned</para>
+            </listItem>
+          </sequentialList>
+        </proceduralStep>
+
+        <proceduralStep>
+          <title>Visual Inspections</title>
+          <para>Perform visual inspections of the following systems:</para>
+          <sequentialList>
+            <listItem>
+              <para>ATA-51: Structures - General walk-around inspection for damage, corrosion, or abnormalities</para>
+            </listItem>
+            <listItem>
+              <para>ATA-52: Doors - Inspect door seals, hinges, and locking mechanisms</para>
+            </listItem>
+            <listItem>
+              <para>ATA-53: Fuselage - Check for skin damage, loose fasteners, or fluid leaks</para>
+            </listItem>
+            <listItem>
+              <para>ATA-54: Nacelles/Pylons - Inspect for damage, security, and leaks</para>
+            </listItem>
+            <listItem>
+              <para>ATA-55: Stabilizers - Check for damage and proper attachment</para>
+            </listItem>
+            <listItem>
+              <para>ATA-56: Windows - Inspect for cracks, delamination, or seal deterioration</para>
+            </listItem>
+            <listItem>
+              <para>ATA-57: Wings - Check leading/trailing edges, control surfaces for damage</para>
+            </listItem>
+          </sequentialList>
+        </proceduralStep>
+
+        <proceduralStep>
+          <title>Operational Checks</title>
+          <para>Perform the following operational checks:</para>
+          <sequentialList>
+            <listItem>
+              <para>ATA-27: Flight Controls - Verify freedom of movement and proper operation</para>
+            </listItem>
+            <listItem>
+              <para>ATA-32: Landing Gear - Check gear extension/retraction system operation</para>
+            </listItem>
+            <listItem>
+              <para>ATA-33: Lights - Test all exterior and interior lighting systems</para>
+            </listItem>
+            <listItem>
+              <para>ATA-38: Water/Waste - Check water and waste system operation</para>
+            </listItem>
+          </sequentialList>
+        </proceduralStep>
+
+        <proceduralStep>
+          <title>Servicing Tasks</title>
+          <para>Complete the following servicing tasks as required:</para>
+          <sequentialList>
+            <listItem>
+              <para>ATA-12: Check and replenish all fluid levels (hydraulic, oil, etc.)</para>
+            </listItem>
+            <listItem>
+              <para>ATA-28: Fuel - Check fuel system for leaks and proper operation</para>
+            </listItem>
+            <listItem>
+              <para>ATA-29: Hydraulic Power - Check hydraulic fluid levels and condition</para>
+            </listItem>
+            <listItem>
+              <para>ATA-35: Oxygen - Check oxygen system pressure and serviceability</para>
+            </listItem>
+          </sequentialList>
+        </proceduralStep>
+
+        <proceduralStep>
+          <title>Documentation and Close-out</title>
+          <para>Complete the following documentation tasks:</para>
+          <sequentialList>
+            <listItem>
+              <para>Record all findings and discrepancies in AAMMPP system</para>
+            </listItem>
+            <listItem>
+              <para>Complete all task cards and obtain required signatures</para>
+            </listItem>
+            <listItem>
+              <para>Update configuration records for any changes</para>
+            </listItem>
+            <listItem>
+              <para>Log environmental impact data (ESG reporting)</para>
+            </listItem>
+            <listItem>
+              <para>Obtain return to service approval from authorized personnel</para>
+            </listItem>
+          </sequentialList>
+        </proceduralStep>
+      </mainProcedure>
+
+      <closeRqmts>
+        <reqCondGroup>
+          <noConds/>
+        </reqCondGroup>
+      </closeRqmts>
+    </procedure>
+  </content>
+</dmodule>

@@ -1,8 +1,0 @@
-utcs_uri: "utcs://AMPEL360-AIR-T/BWB-H2-Hy-E/Q100_STD01"
-version: "v2.3"
-qs_anchor: "Q100_STD01@v2.3"
-canonical_paths:
-  config: "02-AIRCRAFT/MODEL_IDENTIFICATION/AMPEL360-AIR-T/ARCH/BWB-H2-Hy-E/FAMILY/Q100_STD01/CONF"
-  domain_integration: "02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100"
-hash_tree: "sha256:abcd1234..."
-tfa_domains: [AAA, CQH, EEE, PPP, LIB, IIS]

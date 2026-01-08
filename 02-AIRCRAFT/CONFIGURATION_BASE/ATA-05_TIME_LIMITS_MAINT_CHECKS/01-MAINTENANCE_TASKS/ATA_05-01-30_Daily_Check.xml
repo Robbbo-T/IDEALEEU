@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  S1000D Issue 5.0 Data Module
+  ATA Chapter 05 - Time Limits and Maintenance Checks
+  Daily Check Maintenance Package
+  
+  This data module defines the Daily Check maintenance tasks for the AMPEL360 AIR-T aircraft.
+  Daily Checks are performed before the first flight of each day.
+-->
+<dmodule xmlns="http://www.s1000d.org/S1000D_5-0/xml_schema_flat"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat http://www.s1000d.org/S1000D_5-0/xml_schema_flat/dmodule.xsd">
+  
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMP360" 
+                systemDiffCode="A" 
+                systemCode="05" 
+                subSystemCode="01" 
+                subSubSystemCode="30"
+                assyCode="00A" 
+                disassyCode="00" 
+                disassyCodeVariant="A"
+                infoCode="610" 
+                infoCodeVariant="A" 
+                itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2025" month="10" day="24"/>
+        <dmTitle>
+          <techName>Daily Check Maintenance Package</techName>
+          <infoName>Visual Inspection</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany enterpriseCode="IDEALE">
+        <enterpriseName>IDEALE EU Consortium</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator enterpriseCode="IDEALE">
+        <enterpriseName>IDEALE EU Technical Publications</enterpriseName>
+      </originator>
+      <applic>
+        <displayText>
+          <simplePara>AMPEL360 AIR-T BWB-H2-Hy-E All Effectivity</simplePara>
+        </displayText>
+      </applic>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+
+  <content>
+    <procedure>
+      <preliminaryRqmts>
+        <reqCondGroup>
+          <noConds/>
+        </reqCondGroup>
+        <reqSupportEquips>
+          <noSupportEquips/>
+        </reqSupportEquips>
+        <reqSupplies>
+          <noSupplies/>
+        </reqSupplies>
+        <reqSpares>
+          <noSpares/>
+        </reqSpares>
+        <reqSafety>
+          <noSafety/>
+        </reqSafety>
+      </preliminaryRqmts>
+
+      <mainProcedure>
+        <proceduralStep>
+          <title>Daily Check Overview</title>
+          <para>
+            This procedure describes the Daily Check inspection to be performed before the first flight 
+            of each operating day. The Daily Check ensures the aircraft is in a safe and airworthy condition 
+            for flight operations.
+          </para>
+          <para>
+            The Daily Check typically takes 1-2 hours and consists primarily of visual inspections 
+            and basic fluid level checks. This check may be performed at the gate or on the ramp.
+          </para>
+        </proceduralStep>
+
+        <proceduralStep>
+          <title>Pre-Check Requirements</title>
+          <para>Before beginning the Daily Check, verify the following:</para>
+          <sequentialList>
+            <listItem>
+              <para>Aircraft technical log is available and reviewed</para>
+            </listItem>
+            <listItem>
+              <para>All open discrepancies have been reviewed and cleared or deferred</para>
+            </listItem>
+            <listItem>
+              <para>Weather conditions are suitable for exterior inspection</para>
+            </listItem>
+            <listItem>
+              <para>Aircraft is parked in a safe location with chocks in place</para>
+            </listItem>
+            <listItem>
+              <para>Qualified line maintenance personnel are performing the check</para>
+            </listItem>
+          </sequentialList>
+        </proceduralStep>
+
+        <proceduralStep>
+          <title>Walk-Around Inspection - Nose Section</title>
+          <para>Beginning at the nose, perform the following inspections:</para>
+          <sequentialList>
+            <listItem>
+              <para>Check nose radome for damage, secure attachment, and cleanliness</para>
+            </listItem>
+            <listItem>
+              <para>Inspect windshield and side windows for cracks, crazing, or delamination</para>
+            </listItem>
+            <listItem>
+              <para>Check pitot tubes and static ports for damage and obstructions</para>
+            </listItem>
+            <listItem>
+              <para>Verify nose landing gear condition, tire wear, and proper extension</para>
+            </listItem>
+            <listItem>
+              <para>Check for hydraulic fluid leaks around nose gear</para>
+            </listItem>
+            <listItem>
+              <para>Inspect wheel wells for cleanliness and absence of foreign objects</para>
+            </listItem>
+          </sequentialList>
+        </proceduralStep>
+
+        <proceduralStep>
+          <title>Walk-Around Inspection - Right Side</title>
+          <para>Proceed to the right side of the aircraft:</para>
+          <sequentialList>
+            <listItem>
+              <para>Inspect right forward fuselage for skin damage, dents, or corrosion</para>
+            </listItem>
+            <listItem>
+              <para>Check all door seals and proper closure of passenger and service doors</para>
+            </listItem>
+            <listItem>
+              <para>Inspect right wing leading edge for damage and ice accumulation</para>
+            </listItem>
+            <listItem>
+              <para>Check right wing fuel vent for obstructions</para>
+            </listItem>
+            <listItem>
+              <para>Verify right wing tip navigation lights are intact and secure</para>
+            </listItem>
+            <listItem>
+              <para>Inspect right main landing gear, tires, brakes, and hydraulic lines</para>
+            </listItem>
+            <listItem>
+              <para>Check right wing trailing edge and control surfaces for damage</para>
+            </listItem>
+            <listItem>
+              <para>Verify right aileron and flap are properly secured and undamaged</para>
+            </listItem>
+          </sequentialList>
+        </proceduralStep>
+
+        <proceduralStep>
+          <title>Walk-Around Inspection - Right Engine</title>
+          <para>Inspect the right engine and nacelle:</para>
+          <sequentialList>
+            <listItem>
+              <para>Check engine cowling for secure attachment and damage</para>
+            </listItem>
+            <listItem>
+              <para>Inspect for fluid leaks (oil, fuel, hydraulic)</para>
+            </listItem>
+            <listItem>
+              <para>Verify fan blades are undamaged and free of foreign object damage</para>
+            </listItem>
+            <listItem>
+              <para>Check engine air inlet for obstructions and damage</para>
+            </listItem>
+            <listItem>
+              <para>Inspect thrust reverser components for proper stowage</para>
+            </listItem>
+            <listItem>
+              <para>Check pylon attachment for security and no visible damage</para>
+            </listItem>
+          </sequentialList>
+        </proceduralStep>
+
+        <proceduralStep>
+          <title>Walk-Around Inspection - Tail Section</title>
+          <para>Proceed to the tail section:</para>
+          <sequentialList>
+            <listItem>
+              <para>Inspect horizontal stabilizer for damage and proper attachment</para>
+            </listItem>
+            <listItem>
+              <para>Check elevator for damage and freedom of movement</para>
+            </listItem>
+            <listItem>
+              <para>Inspect vertical stabilizer and rudder for damage</para>
+            </listItem>
+            <listItem>
+              <para>Verify tail navigation lights are intact and secure</para>
+            </listItem>
+            <listItem>
+              <para>Check APU exhaust and air inlet for damage and obstructions</para>
+            </listItem>
+            <listItem>
+              <para>Inspect aft fuselage for skin damage and loose fasteners</para>
+            </listItem>
+          </sequentialList>
+        </proceduralStep>
+
+        <proceduralStep>
+          <title>Walk-Around Inspection - Left Engine</title>
+          <para>Inspect the left engine and nacelle:</para>
+          <sequentialList>
+            <listItem>
+              <para>Check engine cowling for secure attachment and damage</para>
+            </listItem>
+            <listItem>
+              <para>Inspect for fluid leaks (oil, fuel, hydraulic)</para>
+            </listItem>
+            <listItem>
+              <para>Verify fan blades are undamaged and free of foreign object damage</para>
+            </listItem>
+            <listItem>
+              <para>Check engine air inlet for obstructions and damage</para>
+            </listItem>
+            <listItem>
+              <para>Inspect thrust reverser components for proper stowage</para>
+            </listItem>
+            <listItem>
+              <para>Check pylon attachment for security and no visible damage</para>
+            </listItem>
+          </sequentialList>
+        </proceduralStep>
+
+        <proceduralStep>
+          <title>Walk-Around Inspection - Left Side</title>
+          <para>Complete the walk-around on the left side:</para>
+          <sequentialList>
+            <listItem>
+              <para>Inspect left wing trailing edge and control surfaces for damage</para>
+            </listItem>
+            <listItem>
+              <para>Verify left aileron and flap are properly secured and undamaged</para>
+            </listItem>
+            <listItem>
+              <para>Inspect left main landing gear, tires, brakes, and hydraulic lines</para>
+            </listItem>
+            <listItem>
+              <para>Check left wing fuel vent for obstructions</para>
+            </listItem>
+            <listItem>
+              <para>Verify left wing tip navigation lights are intact and secure</para>
+            </listItem>
+            <listItem>
+              <para>Inspect left wing leading edge for damage and ice accumulation</para>
+            </listItem>
+            <listItem>
+              <para>Check all door seals and proper closure of passenger and service doors</para>
+            </listItem>
+            <listItem>
+              <para>Inspect left forward fuselage for skin damage, dents, or corrosion</para>
+            </listItem>
+          </sequentialList>
+        </proceduralStep>
+
+        <proceduralStep>
+          <title>Fluid Level Checks</title>
+          <para>Verify the following fluid levels:</para>
+          <sequentialList>
+            <listItem>
+              <para>Engine oil levels - Check and record levels, add oil if required</para>
+            </listItem>
+            <listItem>
+              <para>Hydraulic system fluid - Check reservoir levels</para>
+            </listItem>
+            <listItem>
+              <para>Check for any unusual fluid accumulation in drain masts</para>
+            </listItem>
+          </sequentialList>
+        </proceduralStep>
+
+        <proceduralStep>
+          <title>Documentation and Close-out</title>
+          <para>Complete the following documentation tasks:</para>
+          <sequentialList>
+            <listItem>
+              <para>Record the Daily Check completion in the aircraft technical log</para>
+            </listItem>
+            <listItem>
+              <para>Document any discrepancies found during the inspection</para>
+            </listItem>
+            <listItem>
+              <para>Coordinate with flight crew regarding any findings</para>
+            </listItem>
+            <listItem>
+              <para>Enter inspection data in AAMMPP system</para>
+            </listItem>
+            <listItem>
+              <para>Sign off the Daily Check as complete and serviceable</para>
+            </listItem>
+          </sequentialList>
+        </proceduralStep>
+      </mainProcedure>
+
+      <closeRqmts>
+        <reqCondGroup>
+          <noConds/>
+        </reqCondGroup>
+      </closeRqmts>
+    </procedure>
+  </content>
+</dmodule>
