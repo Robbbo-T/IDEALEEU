@@ -6,8 +6,8 @@
 |-------|-------|
 | Document ID | ATA-57-CONN-WR-001 |
 | Type | Connector Specification |
-| Revision | A |
-| Date | 2024-01-15 |
+| Revision | 1.0 |
+| Date | 2026-01-08 |
 
 ## 1. Overview
 
@@ -122,7 +122,7 @@ This document defines electrical and hydraulic connectors at the wing root inter
 
 | Revision | Date | Description | Author |
 |----------|------|-------------|--------|
-| A | 2024-01-15 | Initial release | Systems Engineering |
+| 1.0 | 2026-01-08 | Initial release (Genesis) | @copilot prompted by @AmedeoPelliccia |
 
 ---
 

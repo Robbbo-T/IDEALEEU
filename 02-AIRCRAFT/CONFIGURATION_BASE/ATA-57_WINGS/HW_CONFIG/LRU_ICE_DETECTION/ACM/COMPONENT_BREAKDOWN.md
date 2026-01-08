@@ -7,8 +7,8 @@
 | Document ID | ATA-57-CBD-IDS-001 |
 | Manual Type | Component Breakdown (Exploded Views) |
 | ATA Chapter | 57 - Wings |
-| Revision | A |
-| Date | 2024-01-15 |
+| Revision | 1.0 |
+| Date | 2026-01-08 |
 
 ## 1. Assembly Overview
 
@@ -91,7 +91,7 @@ Item callouts:
 
 | Revision | Date | Description | Author |
 |----------|------|-------------|--------|
-| A | 2024-01-15 | Initial release | Systems Engineering |
+| 1.0 | 2026-01-08 | Initial release (Genesis) | @copilot prompted by @AmedeoPelliccia |
 
 ---
 

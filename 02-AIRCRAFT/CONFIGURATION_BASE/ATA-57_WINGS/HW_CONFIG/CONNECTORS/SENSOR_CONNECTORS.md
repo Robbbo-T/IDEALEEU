@@ -5,8 +5,8 @@
 | Field | Value |
 |-------|-------|
 | Document ID | TBD |
-| Revision | A |
-| Date | 2024-01-15 |
+| Revision | 1.0 |
+| Date | 2026-01-08 |
 | Status | Template |
 
 ## Overview
@@ -34,7 +34,7 @@ This document is a placeholder template for SENSOR_CONNECTORS.
 
 | Revision | Date | Description | Author |
 |----------|------|-------------|--------|
-| A | 2024-01-15 | Initial template | Systems Engineering |
+| 1.0 | 2026-01-08 | Initial release (Genesis) | @copilot prompted by @AmedeoPelliccia |
 
 ---
 

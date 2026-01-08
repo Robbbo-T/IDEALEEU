@@ -5,8 +5,8 @@
 | Field | Value |
 |-------|-------|
 | Document ID | ATA-57-LRU-AA-SPEC-001 |
-| Revision | A |
-| Date | 2024-01-15 |
+| Revision | 1.0 |
+| Date | 2026-01-08 |
 | Status | Active |
 | Owner | Systems Engineering |
 
@@ -108,7 +108,7 @@
 
 | Revision | Date | Description | Author |
 |----------|------|-------------|--------|
-| A | 2024-01-15 | Initial release | Systems Engineering |
+| 1.0 | 2026-01-08 | Initial release (Genesis) | @copilot prompted by @AmedeoPelliccia |
 
 ---
 

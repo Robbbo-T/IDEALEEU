@@ -7,8 +7,8 @@
 | Document ID | ATA-57-ACM-IDS-001 |
 | Manual Type | Aircraft Component Manual (ACM) |
 | ATA Chapter | 57 - Wings |
-| Revision | A |
-| Date | 2024-01-15 |
+| Revision | 1.0 |
+| Date | 2026-01-08 |
 | Status | Active |
 
 ## Table of Contents
@@ -119,7 +119,7 @@ The Ice Detection Sensor is a wing-mounted Line Replaceable Unit (LRU) responsib
 
 | Revision | Date | Description | Author |
 |----------|------|-------------|--------|
-| A | 2024-01-15 | Initial release | Systems Engineering |
+| 1.0 | 2026-01-08 | Initial release (Genesis) | @copilot prompted by @AmedeoPelliccia |
 
 ---
 
