@@ -1,0 +1,92 @@
+{
+  "directory": "CAI",
+  "subsystem": "21-00_STANDARDS_GENERAL",
+  "description": "Computer-Aided Integration artifacts and automation",
+  "version": "1.0.0",
+  "created": "2025-10-23",
+  "updated": "2025-10-23",
+  "maintainers": [
+    "CAI Integration Team"
+  ],
+  "purpose": "Template directory structure for CAI (Computer-Aided Integration) containing scripts, applications, process definitions, toolchains, tests, and documentation for integration workflows",
+  "structure": {
+    "SCRIPTS": {
+      "description": "Automation scripts for CAD export, assembly instructions, and integration tests",
+      "files": [
+        "export_step_ap242.sh",
+        "generate_assembly_instructions.py",
+        "run_integration_test.py"
+      ]
+    },
+    "APPLICATIONS": {
+      "description": "Application-specific integration examples and use cases",
+      "files": [
+        "co2_battery_examples.py",
+        "README.md"
+      ]
+    },
+    "PROCESS_DEFINITIONS": {
+      "description": "Formal definitions of assembly sequences and test procedures",
+      "files": [
+        "assembly_sequence.yaml",
+        "test_procedure.yaml"
+      ]
+    },
+    "TOOLCHAINS": {
+      "description": "Integration toolchain components",
+      "subdirectories": [
+        "plm_adapter",
+        "cam_recipes",
+        "test_harness"
+      ]
+    },
+    "INTEGRATION_TESTS": {
+      "description": "Test suites for integration validation",
+      "subdirectories": [
+        "smoke",
+        "regression"
+      ]
+    },
+    "EXPORTS": {
+      "description": "Export formats and packaging artifacts",
+      "subdirectories": [
+        "step_ap242",
+        "packaging"
+      ]
+    },
+    "MANUFACTURING_SIM": {
+      "description": "Manufacturing simulation artifacts"
+    },
+    "QA": {
+      "description": "Quality assurance documentation and checklists"
+    },
+    "DOCS": {
+      "description": "Comprehensive documentation for CAI processes and interfaces",
+      "files": [
+        "CAI_GUIDE.md",
+        "INTERFACES.md"
+      ]
+    }
+  },
+  "dependencies": {
+    "python": ">=3.8",
+    "cad_tools": ["FreeCAD", "OpenCASCADE"],
+    "formats": ["STEP AP242", "IGES", "JT"]
+  },
+  "standards": [
+    "ISO 10303 (STEP)",
+    "LOTAR",
+    "ATA iSpec 2200"
+  ],
+  "traceability": {
+    "utcs_reference": "TBD",
+    "ebom_linkage": true,
+    "configuration_control": true
+  },
+  "notes": [
+    "This is a template structure - adapt to specific subsystem needs",
+    "Maintain neutral format CAD files alongside native formats",
+    "All changes subject to ECR/ECO process",
+    "Large binary files should use Git LFS"
+  ]
+}

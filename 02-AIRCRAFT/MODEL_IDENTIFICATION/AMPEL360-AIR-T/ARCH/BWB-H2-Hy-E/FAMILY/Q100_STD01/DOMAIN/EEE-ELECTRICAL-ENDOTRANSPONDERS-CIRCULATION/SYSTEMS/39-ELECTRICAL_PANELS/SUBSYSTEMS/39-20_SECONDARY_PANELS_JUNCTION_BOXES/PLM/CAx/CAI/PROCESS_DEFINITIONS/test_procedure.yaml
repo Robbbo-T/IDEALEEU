@@ -1,0 +1,164 @@
+# Test Procedure Definition
+# This file defines the integration test procedures for the subsystem
+
+metadata:
+  subsystem: "39-20_SECONDARY_PANELS_JUNCTION_BOXES"
+  procedure_id: "TP-CAI-001"
+  revision: "R001"
+  author: "CAI Test Team"
+  date: "2025-10-23"
+  description: "Template integration test procedure for CAI artifacts"
+
+test_setup:
+  environment:
+    temperature_range: "20-25°C"
+    humidity_range: "40-60%"
+    cleanliness_level: "ISO_7"
+
+  equipment_required:
+    - name: "Multimeter"
+      model: "Fluke 289"
+      calibration_due: "2026-01-15"
+    - name: "Oscilloscope"
+      model: "Tektronix MSO64"
+      calibration_due: "2026-02-20"
+    - name: "Function Generator"
+      model: "Keysight 33600A"
+      calibration_due: "2026-03-10"
+    - name: "Power Supply"
+      model: "Keithley 2280S"
+      calibration_due: "2025-12-01"
+
+  test_article:
+    part_number: "TEMPLATE-CAI-001"
+    serial_number: "TBD"
+    configuration: "baseline"
+
+test_phases:
+  - phase: 1
+    name: "Visual Inspection"
+    description: "Verify assembly completeness and workmanship"
+    duration_minutes: 30
+
+    test_steps:
+      - step: 1.1
+        description: "Inspect for mechanical damage or defects"
+        acceptance_criteria: "No visible damage, scratches, or defects"
+
+      - step: 1.2
+        description: "Verify all connectors properly mated"
+        acceptance_criteria: "All connectors fully seated with locking features engaged"
+
+      - step: 1.3
+        description: "Check identification labels and markings"
+        acceptance_criteria: "All labels present and legible per drawing"
+
+  - phase: 2
+    name: "Electrical Continuity"
+    description: "Verify electrical connections and isolation"
+    duration_minutes: 45
+
+    test_steps:
+      - step: 2.1
+        description: "Measure resistance of power distribution paths"
+        procedure: "Apply multimeter probes to power bus terminals"
+        acceptance_criteria: "Resistance < 0.1Ω between all power points"
+
+      - step: 2.2
+        description: "Verify ground continuity"
+        procedure: "Measure resistance from ground points to chassis"
+        acceptance_criteria: "Resistance < 0.05Ω for all ground paths"
+
+      - step: 2.3
+        description: "Check isolation between circuits"
+        procedure: "Measure insulation resistance at 500VDC"
+        acceptance_criteria: "Insulation resistance > 100MΩ"
+
+  - phase: 3
+    name: "Functional Testing"
+    description: "Verify operational functionality"
+    duration_minutes: 90
+
+    test_steps:
+      - step: 3.1
+        description: "Power-up sequence test"
+        procedure: "Apply power per startup procedure and monitor voltages"
+        acceptance_criteria:
+          - "All voltages within ±5% of nominal"
+          - "No unexpected current draw"
+          - "No error indicators"
+
+      - step: 3.2
+        description: "Interface communication test"
+        procedure: "Send test patterns and verify responses"
+        acceptance_criteria:
+          - "Communication established within 2 seconds"
+          - "Bit error rate < 1E-9"
+          - "All status registers readable"
+
+      - step: 3.3
+        description: "Load profile test"
+        procedure: "Apply operational load conditions per test matrix"
+        acceptance_criteria:
+          - "System operates stably under all load conditions"
+          - "Temperature rise < 15°C above ambient"
+          - "No thermal shutdowns or warnings"
+
+  - phase: 4
+    name: "Environmental Stress"
+    description: "Verify performance under environmental conditions"
+    duration_minutes: 120
+
+    test_steps:
+      - step: 4.1
+        description: "Temperature cycling"
+        procedure: "Cycle temperature from -20°C to +60°C, 3 cycles"
+        acceptance_criteria: "Functional at all temperature points"
+
+      - step: 4.2
+        description: "Vibration test"
+        procedure: "Apply vibration profile per MIL-STD-810"
+        acceptance_criteria: "No failures during or after vibration"
+
+      - step: 4.3
+        description: "Humidity exposure"
+        procedure: "Expose to 85% RH at 40°C for 24 hours"
+        acceptance_criteria: "Functional after exposure, no corrosion"
+
+  - phase: 5
+    name: "Final Verification"
+    description: "Confirm all systems operational after stress testing"
+    duration_minutes: 30
+
+    test_steps:
+      - step: 5.1
+        description: "Repeat functional tests from Phase 3"
+        acceptance_criteria: "All Phase 3 tests pass"
+
+      - step: 5.2
+        description: "Final visual inspection"
+        acceptance_criteria: "No damage from testing observed"
+
+      - step: 5.3
+        description: "Documentation completion"
+        acceptance_criteria: "All test data recorded, signatures obtained"
+
+pass_fail_criteria:
+  overall: "All test phases must pass for acceptance"
+  phase_pass_requirements:
+    - "All individual test steps meet acceptance criteria"
+    - "No unexplained anomalies observed"
+    - "Test article remains within specification after testing"
+
+documentation_requirements:
+  - "Test data sheets completed for all phases"
+  - "Non-conformances documented with disposition"
+  - "Photographs of test setup and results"
+  - "Calibration certificates for all test equipment"
+  - "Test engineer and quality inspector signatures"
+
+revision_history:
+  - revision: "R001"
+    date: "2025-10-23"
+    author: "CAI Test Team"
+    changes: "Initial template release"

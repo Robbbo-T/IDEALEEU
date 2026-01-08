@@ -1,0 +1,110 @@
+# Assembly Sequence Definition
+# This file defines the step-by-step assembly sequence for the subsystem
+
+metadata:
+  subsystem: "87-90_COMPLIANCE"
+  revision: "R001"
+  author: "CAI Integration Team"
+  date: "2025-10-23"
+  description: "Template assembly sequence for CAI integration"
+
+assembly_sequence:
+  - step: 1
+    operation: "prepare_workspace"
+    description: "Prepare clean workspace and verify tooling availability"
+    duration_minutes: 15
+    tools:
+      - "assembly_fixture_A"
+      - "torque_wrench_set"
+      - "inspection_gauges"
+    prerequisites: []
+    safety_notes:
+      - "Ensure ESD protection is in place"
+      - "Verify work area cleanliness"
+
+  - step: 2
+    operation: "mount_base_assembly"
+    description: "Mount base assembly onto fixture with proper alignment"
+    duration_minutes: 20
+    tools:
+      - "assembly_fixture_A"
+      - "alignment_pins"
+    prerequisites:
+      - step: 1
+    reference_models:
+      - "BASE_ASM_001.step"
+    tolerances:
+      - type: "position"
+        value: "±0.1mm"
+
+  - step: 3
+    operation: "install_interface_components"
+    description: "Install interface mounting brackets and fasteners"
+    duration_minutes: 30
+    tools:
+      - "torque_wrench_set"
+      - "fastener_kit_IF01"
+    prerequisites:
+      - step: 2
+    torque_specifications:
+      - fastener: "M6x16_SS316"
+        torque_nm: 12
+        sequence: "cross_pattern"
+
+  - step: 4
+    operation: "route_harnesses"
+    description: "Route electrical harnesses per routing diagram"
+    duration_minutes: 45
+    tools:
+      - "cable_tie_gun"
+      - "routing_template_E01"
+    prerequisites:
+      - step: 3
+    reference_documents:
+      - "EWIS_ROUTING_DIAGRAM_001.pdf"
+
+  - step: 5
+    operation: "install_covers"
+    description: "Install protective covers and access panels"
+    duration_minutes: 25
+    tools:
+      - "panel_clips"
+      - "torque_wrench_set"
+    prerequisites:
+      - step: 4
+
+  - step: 6
+    operation: "final_inspection"
+    description: "Perform visual inspection and dimensional verification"
+    duration_minutes: 30
+    tools:
+      - "inspection_checklist"
+      - "calipers"
+      - "CMM_portable"
+    prerequisites:
+      - step: 5
+    acceptance_criteria:
+      - "All fasteners torqued to specification"
+      - "No interference with adjacent systems"
+      - "Clearances meet requirements per drawing"
+      - "Documentation complete"
+
+quality_checkpoints:
+  - after_step: 2
+    checkpoint: "alignment_verification"
+    inspector_required: true
+
+  - after_step: 4
+    checkpoint: "electrical_continuity"
+    inspector_required: true
+
+  - after_step: 6
+    checkpoint: "final_acceptance"
+    inspector_required: true
+    documentation_required: true
+
+revision_history:
+  - revision: "R001"
+    date: "2025-10-23"
+    author: "CAI Team"
+    changes: "Initial template release"
