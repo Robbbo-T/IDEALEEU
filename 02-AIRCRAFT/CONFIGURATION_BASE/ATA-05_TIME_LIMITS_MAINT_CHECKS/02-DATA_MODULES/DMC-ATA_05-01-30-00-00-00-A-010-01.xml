@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- S1000D Data Module: ATA-05 Time Limits and Life Limits -->
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/descript.xsd">
+  
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="ATA_05" systemDiffCode="01" systemCode="30"
+                subSystemCode="0" subSubSystemCode="0" assyCode="00"
+                disassyCode="00" disassyCodeVariant="A" infoCode="010"
+                infoCodeVariant="A" itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="01"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2025" month="10" day="24"/>
+        <dmTitle>
+          <techName>Time Limits and Life Limits</techName>
+          <infoName>Airworthiness Limitations and Component Life Management</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany enterpriseCode="IDEALEEU">
+        <enterpriseName>IDEALE-EU Consortium</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator enterpriseCode="CMP">
+        <enterpriseName>Configuration and Maintenance Planning</enterpriseName>
+      </originator>
+      <applicability>
+        <applic>
+          <displayText>
+            <simplePara>All AMPEL360-AIR-T aircraft models</simplePara>
+          </displayText>
+        </applic>
+      </applicability>
+      <brexDmRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="S1000D" systemDiffCode="00" systemCode="00"
+                    subSystemCode="0" subSubSystemCode="0" assyCode="00"
+                    disassyCode="00" disassyCodeVariant="A" infoCode="022"
+                    infoCodeVariant="A" itemLocationCode="A"/>
+          </dmRefIdent>
+        </dmRef>
+      </brexDmRef>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+  
+  <content>
+    <description>
+      <levelledPara>
+        <title>Time Limits and Life Limits</title>
+        <para>This Data Module defines the time-limited and life-limited items requiring mandatory replacement or overhaul under ATA Chapter 05. Compliance with these limits is mandatory for continued airworthiness.</para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Regulatory Framework</title>
+        <para>Time and life limits are established in accordance with:</para>
+        <para>
+          <randomList>
+            <listItem>
+              <para>EASA CS-25 Section 25.1529 - Instructions for Continued Airworthiness</para>
+            </listItem>
+            <listItem>
+              <para>FAA Part 25 Section 25.571 - Damage Tolerance and Fatigue Evaluation</para>
+            </listItem>
+            <listItem>
+              <para>Certification Maintenance Requirements (CMR)</para>
+            </listItem>
+            <listItem>
+              <para>Airworthiness Limitation Items (ALI)</para>
+            </listItem>
+          </randomList>
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Life-Limited Parts (LLP)</title>
+        <para>The following component categories are subject to mandatory life limits:</para>
+        
+        <levelledPara>
+          <title>Engine Components</title>
+          <para>
+            <randomList>
+              <listItem>
+                <para>Turbine disks and blades - 20,000 cycles</para>
+              </listItem>
+              <listItem>
+                <para>Compressor disks - 25,000 cycles</para>
+              </listItem>
+              <listItem>
+                <para>Combustion chamber liners - 15,000 cycles</para>
+              </listItem>
+              <listItem>
+                <para>Rotating shafts - 30,000 cycles</para>
+              </listItem>
+            </randomList>
+          </para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>Landing Gear Components</title>
+          <para>
+            <randomList>
+              <listItem>
+                <para>Main landing gear cylinders - 40,000 cycles</para>
+              </listItem>
+              <listItem>
+                <para>Nose landing gear cylinders - 35,000 cycles</para>
+              </listItem>
+              <listItem>
+                <para>Landing gear actuators - 50,000 cycles</para>
+              </listItem>
+              <listItem>
+                <para>Wheels and brakes - per manufacturer specification</para>
+              </listItem>
+            </randomList>
+          </para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>Structural Components</title>
+          <para>
+            <randomList>
+              <listItem>
+                <para>Wing main spar - 60,000 flight hours</para>
+              </listItem>
+              <listItem>
+                <para>Wing attachment fittings - 90,000 cycles</para>
+              </listItem>
+              <listItem>
+                <para>Fuselage pressure bulkhead - 75,000 cycles</para>
+              </listItem>
+              <listItem>
+                <para>Engine mounting pylons - 50,000 flight hours</para>
+              </listItem>
+            </randomList>
+          </para>
+        </levelledPara>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Time-Limited Components</title>
+        <para>The following systems have calendar-based or operational time limits:</para>
+        
+        <levelledPara>
+          <title>Safety-Critical Systems</title>
+          <para>
+            <randomList>
+              <listItem>
+                <para>Emergency oxygen generators - 15 years from manufacture date</para>
+              </listItem>
+              <listItem>
+                <para>Emergency escape slides - 12 years from manufacture date</para>
+              </listItem>
+              <listItem>
+                <para>Fire extinguisher bottles - 12 years from last hydrostatic test</para>
+              </listItem>
+              <listItem>
+                <para>ELT batteries - per manufacturer specification (typically 6 years)</para>
+              </listItem>
+            </randomList>
+          </para>
+        </levelledPara>
+        
+        <levelledPara>
+          <title>Hydraulic and Pneumatic Systems</title>
+          <para>
+            <randomList>
+              <listItem>
+                <para>Hydraulic hoses - 8 years from manufacture date</para>
+              </listItem>
+              <listItem>
+                <para>Pneumatic ducting - 12 years from installation</para>
+              </listItem>
+              <listItem>
+                <para>Accumulator bladders - 10 years from installation</para>
+              </listItem>
+              <listItem>
+                <para>Seals and O-rings - per component overhaul intervals</para>
+              </listItem>
+            </randomList>
+          </para>
+        </levelledPara>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Life Management Process</title>
+        <para>Life-limited parts tracking and management includes:</para>
+        <para>
+          <sequentialList>
+            <listItem>
+              <para>Initial installation record with part number, serial number, and initial cycles/hours</para>
+            </listItem>
+            <listItem>
+              <para>Continuous tracking of accumulated cycles/hours via AAMMPP digital passport</para>
+            </listItem>
+            <listItem>
+              <para>Automated alerts at 75%, 90%, and 95% of life limit</para>
+            </listItem>
+            <listItem>
+              <para>Mandatory removal at life limit with proper documentation</para>
+            </listItem>
+            <listItem>
+              <para>Disposition decision (scrap, repair, return to manufacturer)</para>
+            </listItem>
+            <listItem>
+              <para>Digital passport update and configuration state change</para>
+            </listItem>
+          </sequentialList>
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Fatigue and Damage Tolerance</title>
+        <para>Structural life limits are based on fatigue and damage tolerance analysis:</para>
+        <para>
+          <randomList>
+            <listItem>
+              <para>Full-scale fatigue testing to validate analytical models</para>
+            </listItem>
+            <listItem>
+              <para>Damage tolerance analysis per AC 25.571-1D</para>
+            </listItem>
+            <listItem>
+              <para>Corrosion prevention and control program (CPCP)</para>
+            </listItem>
+            <listItem>
+              <para>Structural health monitoring (SHM) integration</para>
+            </listItem>
+            <listItem>
+              <para>Non-destructive testing (NDT) schedule and acceptance criteria</para>
+            </listItem>
+          </randomList>
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Digital Passport Integration</title>
+        <para>All life-limited and time-limited items are tracked via AMSDP (Aerospace Material &amp; Software Digital Passports):</para>
+        <para>
+          <randomList>
+            <listItem>
+              <para>Unique component identifier linked to digital passport</para>
+            </listItem>
+            <listItem>
+              <para>Real-time life consumption tracking</para>
+            </listItem>
+            <listItem>
+              <para>Automated alerts and compliance monitoring</para>
+            </listItem>
+            <listItem>
+              <para>Blockchain-anchored audit trail for all transactions</para>
+            </listItem>
+            <listItem>
+              <para>Interoperability with MRO and supply chain systems</para>
+            </listItem>
+          </randomList>
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>ESG and Sustainability</title>
+        <para>Life limit management includes environmental considerations:</para>
+        <para>
+          <randomList>
+            <listItem>
+              <para>Circular economy principles for component reuse and remanufacturing</para>
+            </listItem>
+            <listItem>
+              <para>Material recovery and recycling at end of life</para>
+            </listItem>
+            <listItem>
+              <para>Hazardous material tracking and disposal per regulations</para>
+            </listItem>
+            <listItem>
+              <para>Carbon footprint assessment of replacement cycles</para>
+            </listItem>
+            <listItem>
+              <para>Extended producer responsibility compliance</para>
+            </listItem>
+          </randomList>
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Compliance and Audit</title>
+        <para>Time and life limit compliance is subject to:</para>
+        <para>
+          <randomList>
+            <listItem>
+              <para>Continuous airworthiness monitoring by regulatory authorities</para>
+            </listItem>
+            <listItem>
+              <para>Annual internal audits per EASA Part-M requirements</para>
+            </listItem>
+            <listItem>
+              <para>Digital audit trail maintained for entire aircraft lifecycle</para>
+            </listItem>
+            <listItem>
+              <para>Non-compliance reporting and corrective action procedures</para>
+            </listItem>
+          </randomList>
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>References</title>
+        <para>
+          <randomList>
+            <listItem>
+              <para>EASA CS-25 Section 25.1529 - Instructions for Continued Airworthiness</para>
+            </listItem>
+            <listItem>
+              <para>FAA AC 25.571-1D - Damage Tolerance and Fatigue Evaluation</para>
+            </listItem>
+            <listItem>
+              <para>FAA AC 120-16F - Air Carrier Maintenance Programs</para>
+            </listItem>
+            <listItem>
+              <para>ATA Spec 100 - Simplified Technical English</para>
+            </listItem>
+            <listItem>
+              <para>IDEALE-EU CMP-STD-1001 - Configuration and Maintenance Planning Standard</para>
+            </listItem>
+          </randomList>
+        </para>
+      </levelledPara>
+    </description>
+  </content>
+</dmodule>

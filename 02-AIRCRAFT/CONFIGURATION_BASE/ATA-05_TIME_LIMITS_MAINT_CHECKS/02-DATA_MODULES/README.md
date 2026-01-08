@@ -56,6 +56,46 @@ All Data Modules follow configuration control:
 - **ASD S1000D**: Aerospace and Defence Industries Association of Europe
 - **MSG-3**: Maintenance Steering Group logic (where applicable)
 
+## Data Module Inventory
+
+This directory contains the following S1000D Data Modules:
+
+```
+02-DATA_MODULES/
+├── README.md
+├── DMC-ATA_05-01-10-00-00-00-A-001-01.xml
+├── DMC-ATA_05-01-20-00-00-00-A-002-01.xml
+└── DMC-ATA_05-01-30-00-00-00-A-010-01.xml
+```
+
+### Data Module Details
+
+| Data Module Code | Title | Description | Issue |
+|-----------------|-------|-------------|-------|
+| DMC-ATA_05-01-10-00-00-00-A-001-01.xml | Scheduled Maintenance Intervals | Defines calendar-, flight-hour-, cycle-, and condition-based maintenance intervals | 001-01 |
+| DMC-ATA_05-01-20-00-00-00-A-002-01.xml | A/B/C/D Check Requirements | Details the scope, frequency, and requirements for major periodic maintenance checks | 001-01 |
+| DMC-ATA_05-01-30-00-00-00-A-010-01.xml | Time Limits and Life Limits | Specifies mandatory time and life limits for safety-critical and life-limited components | 001-01 |
+
+### DMC Naming Convention
+
+The Data Module Codes follow S1000D standard naming:
+- **Model Ident**: ATA_05 (ATA Chapter 05)
+- **System Diff**: 01 (Standard configuration)
+- **System Code**: 10, 20, 30 (Maintenance interval types)
+- **Sub-system/Assy/Disassy**: 00-00-00 (General)
+- **Disassy Code Variant**: A (Standard variant)
+- **Info Code**: 001, 002, 010 (Information type)
+- **Info Code Variant**: 01 (Standard issue)
+- **Item Location**: A (Standard location)
+
+### Usage
+
+These Data Modules provide the technical foundation for:
+1. **AAMMPP Integration**: Automated maintenance scheduling and work order generation
+2. **Digital Passport Updates**: Component lifecycle tracking via AMSDP
+3. **ESG Reporting**: Environmental and sustainability metrics per maintenance activity
+4. **Regulatory Compliance**: Alignment with EASA/FAA continuing airworthiness requirements
+
 ## Status
 Active — Baseline 1.0
 

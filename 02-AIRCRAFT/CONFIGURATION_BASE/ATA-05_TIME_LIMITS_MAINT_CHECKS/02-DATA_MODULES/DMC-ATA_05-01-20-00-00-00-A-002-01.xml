@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- S1000D Data Module: ATA-05 A/B/C/D Check Requirements -->
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/descript.xsd">
+  
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="ATA_05" systemDiffCode="01" systemCode="20"
+                subSystemCode="0" subSubSystemCode="0" assyCode="00"
+                disassyCode="00" disassyCodeVariant="A" infoCode="002"
+                infoCodeVariant="A" itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="01"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2025" month="10" day="24"/>
+        <dmTitle>
+          <techName>A/B/C/D Check Requirements</techName>
+          <infoName>Major Maintenance Check Planning</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany enterpriseCode="IDEALEEU">
+        <enterpriseName>IDEALE-EU Consortium</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator enterpriseCode="CMP">
+        <enterpriseName>Configuration and Maintenance Planning</enterpriseName>
+      </originator>
+      <applicability>
+        <applic>
+          <displayText>
+            <simplePara>All AMPEL360-AIR-T aircraft models</simplePara>
+          </displayText>
+        </applic>
+      </applicability>
+      <brexDmRef>
+        <dmRef>
+          <dmRefIdent>
+            <dmCode modelIdentCode="S1000D" systemDiffCode="00" systemCode="00"
+                    subSystemCode="0" subSubSystemCode="0" assyCode="00"
+                    disassyCode="00" disassyCodeVariant="A" infoCode="022"
+                    infoCodeVariant="A" itemLocationCode="A"/>
+          </dmRefIdent>
+        </dmRef>
+      </brexDmRef>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+  
+  <content>
+    <description>
+      <levelledPara>
+        <title>A/B/C/D Check Requirements</title>
+        <para>This Data Module defines the requirements and scope for major periodic maintenance checks under ATA Chapter 05.</para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Check Type Overview</title>
+        <para>Periodic maintenance checks are classified into four major categories:</para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>A Check</title>
+        <para><emphasis emphasisType="em01">Frequency:</emphasis> Every 400-600 flight hours or 200-300 flight cycles</para>
+        <para><emphasis emphasisType="em01">Duration:</emphasis> 10-20 hours, typically performed overnight</para>
+        <para><emphasis emphasisType="em01">Scope:</emphasis></para>
+        <para>
+          <randomList>
+            <listItem>
+              <para>Visual inspections of aircraft systems</para>
+            </listItem>
+            <listItem>
+              <para>Operational checks and lubrication</para>
+            </listItem>
+            <listItem>
+              <para>Minor repairs and adjustments</para>
+            </listItem>
+            <listItem>
+              <para>Fluid level checks and replenishment</para>
+            </listItem>
+          </randomList>
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>B Check</title>
+        <para><emphasis emphasisType="em01">Frequency:</emphasis> Every 4-6 months or 1,000-1,500 flight hours</para>
+        <para><emphasis emphasisType="em01">Duration:</emphasis> 1-3 days in hangar</para>
+        <para><emphasis emphasisType="em01">Scope:</emphasis></para>
+        <para>
+          <randomList>
+            <listItem>
+              <para>More detailed inspections than A Check</para>
+            </listItem>
+            <listItem>
+              <para>Systems testing and functional checks</para>
+            </listItem>
+            <listItem>
+              <para>Component replacements at life limits</para>
+            </listItem>
+            <listItem>
+              <para>Landing gear and brake inspections</para>
+            </listItem>
+          </randomList>
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>C Check</title>
+        <para><emphasis emphasisType="em01">Frequency:</emphasis> Every 18-24 months or 3,000-4,500 flight hours</para>
+        <para><emphasis emphasisType="em01">Duration:</emphasis> 1-2 weeks in hangar</para>
+        <para><emphasis emphasisType="em01">Scope:</emphasis></para>
+        <para>
+          <randomList>
+            <listItem>
+              <para>Comprehensive structural inspections</para>
+            </listItem>
+            <listItem>
+              <para>Major component overhauls</para>
+            </listItem>
+            <listItem>
+              <para>Access panel removal for internal inspections</para>
+            </listItem>
+            <listItem>
+              <para>Corrosion prevention and treatment</para>
+            </listItem>
+            <listItem>
+              <para>Flight control rigging and calibration</para>
+            </listItem>
+          </randomList>
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>D Check</title>
+        <para><emphasis emphasisType="em01">Frequency:</emphasis> Every 6-10 years or 20,000-30,000 flight hours</para>
+        <para><emphasis emphasisType="em01">Duration:</emphasis> 1-2 months, complete aircraft teardown</para>
+        <para><emphasis emphasisType="em01">Scope:</emphasis></para>
+        <para>
+          <randomList>
+            <listItem>
+              <para>Complete structural inspection and NDT</para>
+            </listItem>
+            <listItem>
+              <para>Major systems overhaul and upgrade</para>
+            </listItem>
+            <listItem>
+              <para>Interior refurbishment and modernization</para>
+            </listItem>
+            <listItem>
+              <para>Avionics upgrade and recertification</para>
+            </listItem>
+            <listItem>
+              <para>Paint stripping and repainting</para>
+            </listItem>
+          </randomList>
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Integration with AAMMPP</title>
+        <para>All check requirements are integrated with the Aerospace Assets Management, Maintenance and Procurement Platform (AAMMPP):</para>
+        <para>
+          <randomList>
+            <listItem>
+              <para>Automated scheduling based on aircraft utilization</para>
+            </listItem>
+            <listItem>
+              <para>Work package generation and resource planning</para>
+            </listItem>
+            <listItem>
+              <para>Digital passport updates upon completion</para>
+            </listItem>
+            <listItem>
+              <para>ESG impact tracking and reporting</para>
+            </listItem>
+          </randomList>
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>ESG Considerations</title>
+        <para>Each check type includes ESG metrics tracking:</para>
+        <para>
+          <randomList>
+            <listItem>
+              <para>Material waste and recycling rates</para>
+            </listItem>
+            <listItem>
+              <para>Energy consumption during maintenance</para>
+            </listItem>
+            <listItem>
+              <para>Chemical usage and environmental impact</para>
+            </listItem>
+            <listItem>
+              <para>Worker safety and health monitoring</para>
+            </listItem>
+            <listItem>
+              <para>Carbon footprint per maintenance event</para>
+            </listItem>
+          </randomList>
+        </para>
+      </levelledPara>
+      
+      <levelledPara>
+        <title>Compliance References</title>
+        <para>
+          <randomList>
+            <listItem>
+              <para>EASA Part-M - Continuing Airworthiness Requirements</para>
+            </listItem>
+            <listItem>
+              <para>FAA AC 120-16F - Air Carrier Maintenance Programs</para>
+            </listItem>
+            <listItem>
+              <para>MSG-3 - Maintenance Program Development</para>
+            </listItem>
+            <listItem>
+              <para>ISO 14001:2015 - Environmental Management Systems</para>
+            </listItem>
+          </randomList>
+        </para>
+      </levelledPara>
+    </description>
+  </content>
+</dmodule>

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  S1000D Issue 5.0 Data Module
+  ATA Chapter 05 - Time Limits and Maintenance Checks
+  B-Check Maintenance Package
+  
+  This data module defines the B-Check maintenance tasks for the AMPEL360 AIR-T aircraft.
+  B-Checks are performed every 4-6 months or 1,500-2,500 flight hours.
+-->
+<dmodule xmlns="http://www.s1000d.org/S1000D_5-0/xml_schema_flat"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat http://www.s1000d.org/S1000D_5-0/xml_schema_flat/dmodule.xsd">
+  
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="AMP360" 
+                systemDiffCode="A" 
+                systemCode="05" 
+                subSystemCode="01" 
+                subSubSystemCode="20"
+                assyCode="00A" 
+                disassyCode="00" 
+                disassyCodeVariant="A"
+                infoCode="540" 
+                infoCodeVariant="A" 
+                itemLocationCode="A"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2025" month="10" day="24"/>
+        <dmTitle>
+          <techName>B-Check Maintenance Package</techName>
+          <infoName>Operational Test</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany enterpriseCode="IDEALE">
+        <enterpriseName>IDEALE EU Consortium</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator enterpriseCode="IDEALE">
+        <enterpriseName>IDEALE EU Technical Publications</enterpriseName>
+      </originator>
+      <applic>
+        <displayText>
+          <simplePara>AMPEL360 AIR-T BWB-H2-Hy-E All Effectivity</simplePara>
+        </displayText>
+      </applic>
+      <qualityAssurance>
+        <unverified/>
+      </qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+
+  <content>
+    <procedure>
+      <preliminaryRqmts>
+        <reqCondGroup>
+          <noConds/>
+        </reqCondGroup>
+        <reqSupportEquips>
+          <noSupportEquips/>
+        </reqSupportEquips>
+        <reqSupplies>
+          <noSupplies/>
+        </reqSupplies>
+        <reqSpares>
+          <noSpares/>
+        </reqSpares>
+        <reqSafety>
+          <noSafety/>
+        </reqSafety>
+      </preliminaryRqmts>
+
+      <mainProcedure>
+        <proceduralStep>
+          <title>B-Check Maintenance Task Overview</title>
+          <para>
+            This procedure describes the B-Check maintenance tasks to be performed at intervals of 
+            4-6 months or 1,500-2,500 flight hours, whichever occurs first.
+          </para>
+          <para>
+            The B-Check typically takes 1-3 days and includes detailed inspections, lubrication tasks, 
+            and minor component replacements. All A-Check tasks are also included in the B-Check.
+          </para>
+        </proceduralStep>
+
+        <proceduralStep>
+          <title>Pre-Check Requirements</title>
+          <para>Before beginning the B-Check, verify the following:</para>
+          <sequentialList>
+            <listItem>
+              <para>Aircraft is positioned in a maintenance hangar</para>
+            </listItem>
+            <listItem>
+              <para>Aircraft is properly grounded, secured, and on jacks if required</para>
+            </listItem>
+            <listItem>
+              <para>Work order has been generated in AAMMPP system</para>
+            </listItem>
+            <listItem>
+              <para>All required tools, materials, and spare parts are available</para>
+            </listItem>
+            <listItem>
+              <para>Qualified maintenance personnel and inspectors are assigned</para>
+            </listItem>
+            <listItem>
+              <para>All open discrepancies from previous checks have been reviewed</para>
+            </listItem>
+          </sequentialList>
+        </proceduralStep>
+
+        <proceduralStep>
+          <title>Detailed Structural Inspections</title>
+          <para>Perform detailed inspections of the following structural areas:</para>
+          <sequentialList>
+            <listItem>
+              <para>ATA-51: Structures - Detailed inspection of primary structure, including fastener torque checks</para>
+            </listItem>
+            <listItem>
+              <para>ATA-53: Fuselage - Detailed inspection of pressure bulkheads, frames, and skin panels</para>
+            </listItem>
+            <listItem>
+              <para>ATA-54: Nacelles/Pylons - Detailed inspection of engine mounts and attachment points</para>
+            </listItem>
+            <listItem>
+              <para>ATA-55: Stabilizers - Detailed inspection of stabilizer attachments and actuators</para>
+            </listItem>
+            <listItem>
+              <para>ATA-57: Wings - Detailed inspection of wing-body transition area (blended surfaces) and main spars</para>
+            </listItem>
+          </sequentialList>
+        </proceduralStep>
+
+        <proceduralStep>
+          <title>Systems Detailed Inspections</title>
+          <para>Perform detailed inspections of the following systems:</para>
+          <sequentialList>
+            <listItem>
+              <para>ATA-21: Air Conditioning - Inspect air conditioning packs, ducts, and controls</para>
+            </listItem>
+            <listItem>
+              <para>ATA-24: Electrical Power - Inspect generators, batteries, and distribution system</para>
+            </listItem>
+            <listItem>
+              <para>ATA-27: Flight Controls - Detailed inspection of actuators, linkages, and cables</para>
+            </listItem>
+            <listItem>
+              <para>ATA-29: Hydraulic Power - Detailed inspection of pumps, reservoirs, and lines</para>
+            </listItem>
+            <listItem>
+              <para>ATA-30: Ice and Rain Protection - Inspect anti-ice/de-ice systems</para>
+            </listItem>
+            <listItem>
+              <para>ATA-32: Landing Gear - Detailed inspection of gear, doors, and actuators</para>
+            </listItem>
+            <listItem>
+              <para>ATA-36: Pneumatic - Inspect pneumatic system components and ducting</para>
+            </listItem>
+          </sequentialList>
+        </proceduralStep>
+
+        <proceduralStep>
+          <title>Lubrication and Servicing</title>
+          <para>Complete the following lubrication and servicing tasks:</para>
+          <sequentialList>
+            <listItem>
+              <para>Lubricate all flight control hinges and bearings per maintenance manual</para>
+            </listItem>
+            <listItem>
+              <para>Lubricate landing gear components and trunnions</para>
+            </listItem>
+            <listItem>
+              <para>Lubricate door hinges and latches</para>
+            </listItem>
+            <listItem>
+              <para>Service hydraulic system and replace filters as required</para>
+            </listItem>
+            <listItem>
+              <para>Service air conditioning system and replace filters</para>
+            </listItem>
+            <listItem>
+              <para>Replace engine oil and oil filters per powerplant schedule</para>
+            </listItem>
+          </sequentialList>
+        </proceduralStep>
+
+        <proceduralStep>
+          <title>Operational and Functional Tests</title>
+          <para>Perform the following operational and functional tests:</para>
+          <sequentialList>
+            <listItem>
+              <para>ATA-22: Auto Flight - Test autopilot and flight director systems</para>
+            </listItem>
+            <listItem>
+              <para>ATA-27: Flight Controls - Rigging check and control surface travel verification</para>
+            </listItem>
+            <listItem>
+              <para>ATA-32: Landing Gear - Landing gear retraction/extension test with timing</para>
+            </listItem>
+            <listItem>
+              <para>ATA-34: Navigation - Test navigation systems and verify database currency</para>
+            </listItem>
+            <listItem>
+              <para>ATA-45: Central Maintenance - Download and analyze maintenance data</para>
+            </listItem>
+          </sequentialList>
+        </proceduralStep>
+
+        <proceduralStep>
+          <title>Component Replacements</title>
+          <para>Replace the following components per scheduled intervals:</para>
+          <sequentialList>
+            <listItem>
+              <para>Replace cabin air filters (ATA-21)</para>
+            </listItem>
+            <listItem>
+              <para>Replace hydraulic system filters (ATA-29)</para>
+            </listItem>
+            <listItem>
+              <para>Replace emergency equipment per life-limited requirements (ATA-25)</para>
+            </listItem>
+            <listItem>
+              <para>Replace any time-expired parts identified during inspection</para>
+            </listItem>
+          </sequentialList>
+        </proceduralStep>
+
+        <proceduralStep>
+          <title>Documentation and Close-out</title>
+          <para>Complete the following documentation tasks:</para>
+          <sequentialList>
+            <listItem>
+              <para>Record all findings, measurements, and discrepancies in AAMMPP system</para>
+            </listItem>
+            <listItem>
+              <para>Complete all task cards with measurements and obtain required signatures</para>
+            </listItem>
+            <listItem>
+              <para>Update configuration records for all component changes</para>
+            </listItem>
+            <listItem>
+              <para>Update life-limited parts tracking system</para>
+            </listItem>
+            <listItem>
+              <para>Log environmental impact data including waste disposal (ESG reporting)</para>
+            </listItem>
+            <listItem>
+              <para>Generate inspection report and obtain Quality Assurance approval</para>
+            </listItem>
+            <listItem>
+              <para>Obtain return to service approval from authorized inspector</para>
+            </listItem>
+          </sequentialList>
+        </proceduralStep>
+      </mainProcedure>
+
+      <closeRqmts>
+        <reqCondGroup>
+          <noConds/>
+        </reqCondGroup>
+      </closeRqmts>
+    </procedure>
+  </content>
+</dmodule>
