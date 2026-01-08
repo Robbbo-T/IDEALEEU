@@ -521,6 +521,36 @@ Example
 └── ATA_05-01-30_Daily_Check.xml
 ```
 
+**ATA-57 HW_CONFIG - Hardware Configuration**
+
+Hardware configuration management ensures correct component selection, installation, and traceability throughout the lifecycle. The HW_CONFIG directories contain:
+
+* **LRU Configurations** - Line Replaceable Unit specifications, part numbers, variants, and interchangeability data
+* **Physical Configuration** - Installation drawings, connector pinouts, harness routings, and interface definitions
+* **Hardware Documentation** - Datasheets, assembly procedures, test procedures, and maintenance manuals
+
+**Key principles**:
+* LRUs reside in their primary functional ATA chapter
+* All wiring configurations managed in ATA-92_EWIS per EWIS rules
+* Hardware must comply with DO-160 environmental conditions
+* Configuration changes require ECR, impact analysis, and CCB approval
+
+**Structure example**:
+
+```
+02-AIRCRAFT/CONFIGURATION_BASE/ATA-57_WINGS/HW_CONFIG/
+├── LRU_[NAME]/            # Individual LRU configurations
+│   ├── SPECIFICATIONS.pdf
+│   ├── PART_NUMBERS.csv
+│   ├── INSTALLATION.pdf
+│   └── TEST_PROCEDURES.pdf
+├── CONNECTORS/            # Connector definitions
+├── ASSEMBLIES/            # Hardware assemblies
+└── BOM/                   # Bills of materials
+```
+
+Detailed documentation: [`/02-AIRCRAFT/CONFIGURATION_BASE/ATA-57_WINGS/HW_CONFIG/`](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-57_WINGS/HW_CONFIG/)
+
 ### Repository Index and Navigation
 
 **Top‑Level**: [/00‑PROGRAM](./00-PROGRAM/) · [/01‑FLEET](./01-FLEET/) · [/02‑AIRCRAFT](./02-AIRCRAFT/) · [/03‑SPACECRAFT](./03-SPACECRAFT/) · [/04‑SATELLITES](./04-SATELLITES/) · [/05‑TELESCOPES](./05-TELESCOPES/) · [/06‑PROBES](./06-PROBES/) · [/07‑DRONES](./07-DRONES/) · [/08‑LAUNCHERS](./08-LAUNCHERS/) · [/09‑STM‑SPACE‑STATION‑MODULES](./09-STM-SPACE-STATION-MODULES/) · [/10‑BUSINESS](./10-BUSINESS/)
