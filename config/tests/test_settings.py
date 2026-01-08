@@ -18,13 +18,13 @@ class TestSettings:
         monkeypatch.setenv("OIDC_AUDIENCE", "ideale-api")
         monkeypatch.setenv("JWT_SIGNING_KEY", "test-secret-key")
         monkeypatch.setenv("EVENT_BUS_URL", "nats://nats:4222")
-        
+
         # Clear the cache to ensure fresh settings
         get_settings.cache_clear()
-        
+
         # Initialize settings
         settings = Settings()
-        
+
         # Verify settings
         assert settings.env == Environment.DEV
         assert settings.log_level == LogLevel.INFO
@@ -38,19 +38,26 @@ class TestSettings:
     def test_settings_missing_required_var(self, monkeypatch):
         """Test that missing required environment variable raises error."""
         # Clear all IDEALEEU environment variables first
-        for key in ["IDEALEEU_ENV", "IDEALEEU_LOG_LEVEL", "IDEALEEU_DB_URL", 
-                    "IDEALEEU_OBJECT_STORE", "OIDC_ISSUER_URL", "OIDC_AUDIENCE",
-                    "JWT_SIGNING_KEY", "EVENT_BUS_URL"]:
+        for key in [
+            "IDEALEEU_ENV",
+            "IDEALEEU_LOG_LEVEL",
+            "IDEALEEU_DB_URL",
+            "IDEALEEU_OBJECT_STORE",
+            "OIDC_ISSUER_URL",
+            "OIDC_AUDIENCE",
+            "JWT_SIGNING_KEY",
+            "EVENT_BUS_URL",
+        ]:
             monkeypatch.delenv(key, raising=False)
-        
+
         # Set only some environment variables
         monkeypatch.setenv("IDEALEEU_ENV", "dev")
         monkeypatch.setenv("IDEALEEU_LOG_LEVEL", "info")
         # Missing IDEALEEU_DB_URL
-        
+
         # Clear the cache
         get_settings.cache_clear()
-        
+
         # Verify error is raised
         with pytest.raises(ValueError, match="Required environment variable.*is not set"):
             Settings()
@@ -65,9 +72,9 @@ class TestSettings:
         monkeypatch.setenv("OIDC_AUDIENCE", "ideale-api")
         monkeypatch.setenv("JWT_SIGNING_KEY", "test-secret-key")
         monkeypatch.setenv("EVENT_BUS_URL", "nats://nats:4222")
-        
+
         get_settings.cache_clear()
-        
+
         with pytest.raises(ValueError, match="Invalid value.*Valid values"):
             Settings()
 
@@ -81,9 +88,9 @@ class TestSettings:
         monkeypatch.setenv("OIDC_AUDIENCE", "ideale-api")
         monkeypatch.setenv("JWT_SIGNING_KEY", "test-secret-key")
         monkeypatch.setenv("EVENT_BUS_URL", "nats://nats:4222")
-        
+
         get_settings.cache_clear()
-        
+
         with pytest.raises(ValueError, match="Invalid value.*Valid values"):
             Settings()
 
@@ -97,9 +104,9 @@ class TestSettings:
         monkeypatch.setenv("OIDC_AUDIENCE", "ideale-api")
         monkeypatch.setenv("JWT_SIGNING_KEY", "test-secret-key")
         monkeypatch.setenv("EVENT_BUS_URL", "nats://nats:4222")
-        
+
         get_settings.cache_clear()
-        
+
         with pytest.raises(ValueError, match="must be a PostgreSQL connection string"):
             Settings()
 
@@ -113,9 +120,9 @@ class TestSettings:
         monkeypatch.setenv("OIDC_AUDIENCE", "ideale-api")
         monkeypatch.setenv("JWT_SIGNING_KEY", "test-secret-key")
         monkeypatch.setenv("EVENT_BUS_URL", "nats://nats:4222")
-        
+
         get_settings.cache_clear()
-        
+
         with pytest.raises(ValueError, match="must be an S3-compatible URL"):
             Settings()
 
@@ -129,9 +136,9 @@ class TestSettings:
         monkeypatch.setenv("OIDC_AUDIENCE", "ideale-api")
         monkeypatch.setenv("JWT_SIGNING_KEY", "test-secret-key")
         monkeypatch.setenv("EVENT_BUS_URL", "nats://nats:4222")
-        
+
         get_settings.cache_clear()
-        
+
         with pytest.raises(ValueError, match="must be a valid HTTP"):
             Settings()
 
@@ -145,9 +152,9 @@ class TestSettings:
         monkeypatch.setenv("OIDC_AUDIENCE", "ideale-api")
         monkeypatch.setenv("JWT_SIGNING_KEY", "test-secret-key")
         monkeypatch.setenv("EVENT_BUS_URL", "http://nats:4222")
-        
+
         get_settings.cache_clear()
-        
+
         with pytest.raises(ValueError, match="must be a NATS connection string"):
             Settings()
 
@@ -161,9 +168,9 @@ class TestSettings:
         monkeypatch.setenv("OIDC_AUDIENCE", "ideale-api")
         monkeypatch.setenv("JWT_SIGNING_KEY", "change-me")
         monkeypatch.setenv("EVENT_BUS_URL", "nats://nats:4222")
-        
+
         get_settings.cache_clear()
-        
+
         with pytest.raises(ValueError, match="must be changed from default value"):
             Settings()
 
@@ -177,10 +184,10 @@ class TestSettings:
         monkeypatch.setenv("OIDC_AUDIENCE", "ideale-api")
         monkeypatch.setenv("JWT_SIGNING_KEY", "test-secret-key")
         monkeypatch.setenv("EVENT_BUS_URL", "nats://nats:4222")
-        
+
         get_settings.cache_clear()
         settings = Settings()
-        
+
         assert settings.is_dev is True
         assert settings.is_staging is False
         assert settings.is_production is False
@@ -195,12 +202,12 @@ class TestSettings:
         monkeypatch.setenv("OIDC_AUDIENCE", "ideale-api")
         monkeypatch.setenv("JWT_SIGNING_KEY", "test-secret-key")
         monkeypatch.setenv("EVENT_BUS_URL", "nats://nats:4222")
-        
+
         get_settings.cache_clear()
-        
+
         settings1 = get_settings()
         settings2 = get_settings()
-        
+
         assert settings1 is settings2
 
     def test_settings_repr_no_sensitive_data(self, monkeypatch):
@@ -213,12 +220,12 @@ class TestSettings:
         monkeypatch.setenv("OIDC_AUDIENCE", "ideale-api")
         monkeypatch.setenv("JWT_SIGNING_KEY", "test-secret-key")
         monkeypatch.setenv("EVENT_BUS_URL", "nats://nats:4222")
-        
+
         get_settings.cache_clear()
         settings = Settings()
-        
+
         repr_str = repr(settings)
-        
+
         # Should not contain passwords or full connection strings
         assert "pass" not in repr_str.lower() or "***" in repr_str
         assert "test-secret-key" not in repr_str
